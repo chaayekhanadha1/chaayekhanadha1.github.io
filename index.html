@@ -328,17 +328,27 @@
 
     .about-photo {
       width: 100%;
-      aspect-ratio: 1/1;
+      aspect-ratio: 4/5;
       border-radius: 4px;
       border: 1px solid rgba(201,151,74,0.18);
       overflow: hidden;
       position: relative;
       background: #000;
     }
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .about-photo .carousel-slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+    .about-photo .carousel-slide.active { opacity: 1; }
+    .about-photo picture.carousel-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
       object-position: center;
       display: block;
     }
@@ -901,7 +911,11 @@
     </div>
     <div class="about-visual">
       <div class="about-photo">
-        <img src="chaayeKhana_Logo_Banner.jpg" alt="Chaayekhana DHA 1 — Tea Beyond Borders, Since 2011 Islamabad" loading="lazy">
+        <img src="chaayeKhana_Logo_Banner.jpg" alt="Chaayekhana DHA 1 — Tea Beyond Borders, Since 2011 Islamabad" class="carousel-slide active">
+        <picture class="carousel-slide">
+          <source srcset="images/promo.webp" type="image/webp">
+          <img src="images/promo.jpeg" alt="Chaayekhana DHA 1 — Your new go-to spot in DHA Phase 1, Islamabad">
+        </picture>
       </div>
       <div class="franchise-badge">Official Franchise</div>
     </div>
@@ -1276,6 +1290,18 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+  // About section carousel — auto-advances every 3 seconds
+  (function() {
+    const slides = document.querySelectorAll('.about-photo .carousel-slide');
+    if (slides.length < 2) return;
+    let current = 0;
+    setInterval(function() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  })();
 </script>
 </body>
 </html>
