@@ -536,15 +536,17 @@
     /* ── VIDEO ── */
     .video-section { background: var(--navy); }
     .video-wrapper {
-      max-width: 960px;
+      max-width: 380px;
       margin: 0 auto;
     }
     .video-wrapper video {
       width: 100%;
-      border-radius: 4px;
+      aspect-ratio: 9/16;
+      border-radius: 12px;
       border: 1px solid rgba(201,151,74,0.2);
       display: block;
       box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+      object-fit: cover;
     }
 
     .ig-feed-section { max-width: 1100px; margin: 0 auto; }
@@ -849,7 +851,7 @@
 <!-- ── NAV ── -->
 <nav id="navbar">
   <div class="nav-brand">
-    <img src="chaayeKhana_logo.avif" alt="Chaayekhana" class="nav-logo">
+    <img src="images/chaayeKhana_logo.avif" alt="Chaayekhana" class="nav-logo">
     <div class="nav-brand-sub">DHA Phase 1 · Islamabad</div>
   </div>
   <ul class="nav-links" id="navLinks">
@@ -878,8 +880,8 @@
       <span>📞 0321-5481370</span>
     </div>
     <div class="hero-actions">
-      <a href="#menu" class="btn btn-gold">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      <a href="menu/chaayekhanaDHA1menu.pdf" target="_blank" rel="noopener" class="btn btn-gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         View Menu
       </a>
       <a href="#location" class="btn btn-ghost">
@@ -911,7 +913,7 @@
     </div>
     <div class="about-visual">
       <div class="about-photo">
-        <img src="chaayeKhana_Logo_Banner.jpg" alt="Chaayekhana DHA 1 — Tea Beyond Borders, Since 2011 Islamabad" class="carousel-slide active">
+        <img src="images/chaayeKhana_Logo_Banner.jpg" alt="Chaayekhana DHA 1 — Tea Beyond Borders, Since 2011 Islamabad" class="carousel-slide active">
         <picture class="carousel-slide">
           <source srcset="images/promo.webp" type="image/webp">
           <img src="images/promo.jpeg" alt="Chaayekhana DHA 1 — Your new go-to spot in DHA Phase 1, Islamabad">
@@ -977,6 +979,12 @@
       <p>Premium espresso-based drinks crafted by our trained baristas, from classic lattes to rich americanos.</p>
     </div>
   </div>
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="menu/chaayekhanaDHA1menu.pdf" target="_blank" rel="noopener" class="btn btn-gold">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      View Full Menu (PDF)
+    </a>
+  </div>
 </section>
 
 <!-- ── OFFER ── -->
@@ -1014,7 +1022,7 @@
   </div>
   <div class="video-wrapper">
     <video controls playsinline poster="images/hero-mobile.jpeg">
-      <source src="chaayekhaana_dha1_video.mp4" type="video/mp4">
+      <source src="videos/chaayekhaana_dha1_video.mp4" type="video/mp4">
     </video>
   </div>
 </section>
@@ -1219,7 +1227,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <img src="chaayeKhana_logo.avif" alt="Chaayekhana" style="height:48px;width:auto;display:block;margin-bottom:0.4rem;">
+      <img src="images/chaayeKhana_logo.avif" alt="Chaayekhana" style="height:48px;width:auto;display:block;margin-bottom:0.4rem;">
       <div class="footer-brand-sub">DHA Phase 1 · Official Franchise · Islamabad</div>
       <p class="footer-brand-desc">Plaza No. 11, Sector B1, Defence Avenue, DHA 1, Islamabad 46000.</p>
       <div style="display:flex;gap:0.75rem;margin-top:1rem;">
