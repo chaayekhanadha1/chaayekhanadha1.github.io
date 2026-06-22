@@ -30,7 +30,7 @@
       "addressRegion": "Islamabad Capital Territory",
       "addressCountry": "PK"
     },
-    "telephone": "+92-308-8366536",
+    "telephone": ["+92-308-8366536", "+92-51-6109758"],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -433,68 +433,6 @@
       white-space: nowrap;
     }
 
-    /* ── OFFER ── */
-    .offer {
-      background: linear-gradient(135deg, #142a1e 0%, var(--navy-mid) 55%, #2a1506 100%);
-      border-top: 1px solid rgba(201,151,74,0.18);
-      border-bottom: 1px solid rgba(201,151,74,0.18);
-      padding: 5.5rem 5%;
-    }
-    .offer-inner {
-      max-width: 880px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .offer-number {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(5rem, 14vw, 9rem);
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      position: relative;
-      display: inline-block;
-    }
-    .offer-number sup {
-      font-size: 0.35em;
-      vertical-align: top;
-      margin-top: 0.45em;
-      letter-spacing: 0.05em;
-    }
-    .offer-number sub {
-      font-size: 0.25em;
-      vertical-align: bottom;
-      margin-bottom: 0.3em;
-      color: var(--gold-light);
-    }
-    .offer-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      color: var(--cream);
-      margin: 0.25rem 0 0.75rem;
-    }
-    .offer-sub { color: var(--text-muted); font-size: 0.88rem; max-width: 420px; margin: 0 auto 2.5rem; }
-
-    .offer-pills {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
-    }
-    .offer-pill {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(201,151,74,0.08);
-      border: 1px solid rgba(201,151,74,0.25);
-      border-radius: 100px;
-      padding: 0.6rem 1.25rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .offer-pill span:first-child { font-size: 1rem; }
-    .offer-pill strong { color: var(--text); font-weight: 500; }
-
     /* ── SOCIAL ── */
     .social { background: var(--navy-light); }
 
@@ -871,7 +809,6 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
-    <li><a href="#offer">Offers</a></li>
     <li><a href="#social">Social</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#location" class="nav-cta">Find Us</a></li>
@@ -895,6 +832,8 @@
       <span>📍 Defence Avenue, DHA 1, Islamabad 46000</span>
       <span class="dot">·</span>
       <span>📞 0308-8366536</span>
+      <span class="dot">·</span>
+      <span>📞 051-6109758</span>
     </div>
     <div class="hero-actions">
       <a href="menu.html" class="btn btn-gold">
@@ -976,31 +915,6 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       View Full Menu
     </a>
-  </div>
-</section>
-
-<!-- ── OFFER ── -->
-<section class="offer" id="offer">
-  <div class="offer-inner">
-    <p class="eyebrow">Current Promotion</p>
-    <div class="offer-number"><sup>%</sup>30<sub>OFF</sub></div>
-    <h2 class="offer-title">On Our Entire Menu</h2>
-    <p class="offer-sub">Visit us any day of the week and enjoy 30% off on everything — because great chai deserves great value.</p>
-    <div class="offer-pills">
-      <div class="offer-pill">
-        <span>📅</span>
-        <div><strong>Every Day</strong> &nbsp;Monday – Sunday</div>
-      </div>
-      <div class="offer-pill">
-        <span>🕗</span>
-        <div><strong>All Day</strong> &nbsp;8:00 AM – 11:00 PM</div>
-      </div>
-      <div class="offer-pill">
-        <span>🍽️</span>
-        <div><strong>All Items</strong> &nbsp;Entire Menu</div>
-      </div>
-    </div>
-    <a href="tel:+923088366536" class="btn btn-gold">Call to Reserve &nbsp;→</a>
   </div>
 </section>
 
@@ -1181,7 +1095,10 @@
         <div class="loc-icon">📞</div>
         <div>
           <div class="loc-label">Phone</div>
-          <div class="loc-value"><a href="tel:+923088366536">0308-8366536</a></div>
+          <div class="loc-value">
+            <a href="tel:+923088366536">0308-8366536</a><br>
+            <a href="tel:+92516109758">051-6109758</a>
+          </div>
         </div>
       </div>
       <div class="location-detail">
@@ -1239,7 +1156,6 @@
       <ul>
         <li><a href="#about">About Us</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#offer">Current Offer</a></li>
         <li><a href="#social">Social</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#location">Location</a></li>
@@ -1249,6 +1165,7 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="tel:+923088366536">0308-8366536</a></li>
+        <li><a href="tel:+92516109758">051-6109758</a></li>
         <li><a href="https://wa.me/923088366536" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://maps.app.goo.gl/3pLD5ushRMmmHcAG7" target="_blank" rel="noopener">Get Directions</a></li>
         <li><a href="https://www.chaayekhana.com" target="_blank" rel="noopener">Main Website ↗</a></li>
