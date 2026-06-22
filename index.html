@@ -1254,16 +1254,6 @@
 
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
-  // On mobile, open menu.html in a new tab so the home page stays open
-  // underneath — Google Docs Viewer in menu.html handles PDF rendering on
-  // all devices, avoiding direct PDF download prompts.
-  if (window.innerWidth < 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-    document.querySelectorAll('a[href="menu.html"]').forEach(function(a) {
-      a.target = '_blank';
-      a.rel = 'noopener';
-    });
-  }
-
   // About section carousel — auto-advances every 3 seconds
   (function() {
     const slides = document.querySelectorAll('.about-photo .carousel-slide');
