@@ -142,7 +142,10 @@
       overflow: hidden;
       background:
         linear-gradient(to bottom, rgba(10,21,32,0.68) 0%, rgba(10,21,32,0.90) 100%),
-        url('chaayekhaana_building_dha1.jpeg') center/cover no-repeat;
+        image-set(
+          url('images/hero-desktop.webp') type('image/webp'),
+          url('images/hero-desktop.jpeg') type('image/jpeg')
+        ) center/cover no-repeat;
     }
 
     .hero-dots {
@@ -776,11 +779,40 @@
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-visual { order: -1; }
       .about-photo { aspect-ratio: 16/9; }
+      .about-text p:not(:first-of-type) { display: none; }
       .location-grid { grid-template-columns: 1fr; gap: 2rem; }
       .ig-placeholder-grid { grid-template-columns: repeat(2, 1fr); }
       .social-platforms { grid-template-columns: repeat(3, 1fr); }
       .footer-top { flex-direction: column; }
       .footer-bottom { flex-direction: column; text-align: center; }
+      .menu-card p { display: none; }
+      .menu-card { padding: 1.5rem 1rem; }
+      .reviews-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 0.5rem;
+        gap: 1rem;
+      }
+      .reviews-grid::-webkit-scrollbar { display: none; }
+      .review-card {
+        min-width: 80vw;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background:
+          linear-gradient(to bottom, rgba(10,21,32,0.72) 0%, rgba(10,21,32,0.92) 100%),
+          image-set(
+            url('images/hero-mobile.webp') type('image/webp'),
+            url('images/hero-mobile.jpeg') type('image/jpeg')
+          ) center/cover no-repeat;
+      }
     }
 
     @media (max-width: 500px) {
@@ -873,7 +905,10 @@
     </div>
     <div class="about-visual">
       <div class="about-photo">
-        <img src="chaayekhaanadha1.png" alt="Chaayekhana DHA 1 — Your new go-to spot in DHA Phase 1, Islamabad">
+        <picture>
+          <source srcset="images/promo.webp" type="image/webp">
+          <img src="images/promo.jpeg" alt="Chaayekhana DHA 1 — Your new go-to spot in DHA Phase 1, Islamabad" loading="lazy">
+        </picture>
       </div>
       <div class="franchise-badge">Official Franchise</div>
     </div>
@@ -971,7 +1006,7 @@
     <p class="section-desc">Take a look inside Chaayekhana DHA 1 — where great food, legendary chai, and warm hospitality come together.</p>
   </div>
   <div class="video-wrapper">
-    <video controls playsinline poster="chaayekhaana_building_dha1.jpeg">
+    <video controls playsinline poster="images/hero-mobile.jpeg">
       <source src="chaayekhaana_dha1_video.mp4" type="video/mp4">
     </video>
   </div>
@@ -1038,16 +1073,28 @@
     <!-- Latest posts preview — replace this grid once Behold live feed is active -->
     <div class="ig-placeholder-grid">
       <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
-        <img src="chaayekhaana_menu_1.png" alt="Halwa Puri — Chaayekhana DHA 1">
+        <picture>
+          <source srcset="images/menu1.webp" type="image/webp">
+          <img src="images/menu1.jpeg" alt="Halwa Puri — Chaayekhana DHA 1" loading="lazy">
+        </picture>
       </a>
       <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
-        <img src="chaayekhaana_menu_2.png" alt="Fettuccine Alfredo — Chaayekhana DHA 1">
+        <picture>
+          <source srcset="images/menu2.webp" type="image/webp">
+          <img src="images/menu2.jpeg" alt="Fettuccine Alfredo — Chaayekhana DHA 1" loading="lazy">
+        </picture>
       </a>
       <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
-        <img src="chaayekhaana_menu_3.png" alt="Check In Sip Free — Chaayekhana DHA 1">
+        <picture>
+          <source srcset="images/menu3.webp" type="image/webp">
+          <img src="images/menu3.jpeg" alt="Check In Sip Free — Chaayekhana DHA 1" loading="lazy">
+        </picture>
       </a>
       <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
-        <img src="chaayekhaana_menu_4.png" alt="Ladies Tuesday — Chaayekhana DHA 1">
+        <picture>
+          <source srcset="images/menu4.webp" type="image/webp">
+          <img src="images/menu4.jpeg" alt="Ladies Tuesday — Chaayekhana DHA 1" loading="lazy">
+        </picture>
       </a>
     </div>
 
