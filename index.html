@@ -810,6 +810,14 @@
         flex-shrink: 0;
         scroll-snap-align: start;
       }
+
+      /* Mobile: hide non-essential sections — keep Hero→Offer→Menu→Reviews→Location */
+      section.about,
+      section.video-section,
+      section.social { display: none; }
+
+      /* Tighter section padding on mobile */
+      section { padding: 3rem 5%; }
     }
 
     @media (max-width: 768px) {
