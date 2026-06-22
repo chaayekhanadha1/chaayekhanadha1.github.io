@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu — Chaayekhana DHA 1</title>
+  <meta name="description" content="View the full menu at Chaayekhana DHA 1, Defence Avenue, DHA Phase 1, Islamabad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #122233;
+      --gold: #c9974a;
+      --cream: #f5efe6;
+    }
+    body {
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 5%;
+      background: rgba(13,27,42,0.97);
+      border-bottom: 1px solid rgba(201,151,74,0.18);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .topbar-brand img { height: 32px; width: auto; }
+    .topbar-brand-sub {
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245,239,230,0.5);
+      line-height: 1;
+    }
+    .topbar-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(245,239,230,0.7);
+      text-decoration: none;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(245,239,230,0.18);
+      border-radius: 3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-back:hover { color: var(--gold); border-color: var(--gold); }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 0.45rem 1rem;
+      border-radius: 3px;
+      transition: opacity 0.2s;
+    }
+    .btn-download:hover { opacity: 0.85; }
+
+    /* ── PDF VIEWER ── */
+    .viewer-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 5% 2rem;
+    }
+    .viewer-title {
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+    .viewer-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--cream);
+    }
+    .viewer-title h1 em { color: var(--gold); font-style: italic; }
+    .viewer-title p {
+      font-size: 0.75rem;
+      color: rgba(245,239,230,0.5);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    .pdf-frame-wrap {
+      flex: 1;
+      border: 1px solid rgba(201,151,74,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #1a1a1a;
+      min-height: 75vh;
+    }
+    .pdf-frame-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 75vh;
+      border: none;
+      display: block;
+    }
+
+    /* Mobile fallback — iframe PDFs don't render on iOS Safari */
+    .mobile-fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      min-height: 50vh;
+    }
+    .mobile-fallback svg { color: var(--gold); }
+    .mobile-fallback h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+    }
+    .mobile-fallback p {
+      font-size: 0.82rem;
+      color: rgba(245,239,230,0.6);
+      max-width: 280px;
+      line-height: 1.7;
+    }
+    .btn-open-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      padding: 0.75rem 1.8rem;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 600px) {
+      .pdf-frame-wrap { display: none; }
+      .mobile-fallback { display: flex; }
+      .btn-download { display: none; }
+      .viewer-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="index.html" class="topbar-brand">
+    <img src="images/chaayeKhana_logo.avif" alt="Chaayekhana">
+    <div class="topbar-brand-sub">DHA Phase 1 · Islamabad</div>
+  </a>
+  <div class="topbar-actions">
+    <a href="index.html" class="btn-back">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+    <a href="menu/chaayekhanaDHA1menu.pdf" download class="btn-download">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download
+    </a>
+  </div>
+</header>
+
+<div class="viewer-wrap">
+  <div class="viewer-title">
+    <h1>Our <em>Menu</em></h1>
+    <p>Chaayekhana DHA 1 · Defence Avenue, DHA Phase 1, Islamabad</p>
+  </div>
+
+  <div class="pdf-frame-wrap">
+    <iframe src="menu/chaayekhanaDHA1menu.pdf" title="Chaayekhana DHA 1 Menu"></iframe>
+  </div>
+
+  <!-- Shown only on iOS/mobile where iframe PDF doesn't render -->
+  <div class="mobile-fallback">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <h2>View Our Menu</h2>
+    <p>Tap below to open the full menu in your device's PDF viewer.</p>
+    <a href="menu/chaayekhanaDHA1menu.pdf" target="_blank" class="btn-open-pdf">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Open Menu PDF
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
