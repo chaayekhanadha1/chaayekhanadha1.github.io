@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chaayekhana DHA 1 | Best Tea Cafe in DHA Phase 1, Islamabad</title>
-  <meta name="description" content="Chaayekhana DHA 1 — your neighbourhood tea cafe on Defence Avenue, DHA Phase 1, Islamabad. Signature chai, breakfast, burgers, pizza & more. Open daily 8 AM–11 PM. 30% OFF all menu.">
+  <meta name="description" content="Chaayekhana DHA 1 — Plaza No. 11, Sector B1, Defence Avenue, DHA 1, Islamabad 46000. Signature chai, breakfast, burgers, pizza & more. Open daily 8 AM–11 PM. 30% OFF all menu.">
   <meta name="keywords" content="Chaayekhana DHA 1, Chaayekhana Islamabad, best chai DHA Islamabad, family restaurant DHA Phase 1, cafe near Fauji Foundation Medical University, breakfast DHA Islamabad, tea cafe Islamabad, chai cafe DHA 1">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Chaayekhana DHA 1 | Premium Tea Cafe, DHA Phase 1 Islamabad">
-  <meta property="og:description" content="Signature chai, breakfast, burgers, pizza & more. Defence Avenue, DHA Phase 1, Islamabad. Open daily 8 AM–11 PM.">
+  <meta property="og:description" content="Signature chai, breakfast, burgers, pizza & more. Plaza No. 11, Sector B1, Defence Avenue, DHA 1, Islamabad 46000. Open daily 8 AM–11 PM.">
   <meta property="og:type" content="restaurant">
   <meta property="og:url" content="https://chaayekhanadha1.github.io">
 
@@ -24,8 +24,9 @@
     "url": "https://chaayekhanadha1.github.io",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Defence Avenue, DHA Phase 1",
+      "streetAddress": "Plaza No. 11, Sector B1, Defence Avenue, DHA 1",
       "addressLocality": "Islamabad",
+      "postalCode": "46000",
       "addressRegion": "Islamabad Capital Territory",
       "addressCountry": "PK"
     },
@@ -140,15 +141,14 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(ellipse at 15% 60%, rgba(42,92,69,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 20%, rgba(201,151,74,0.15) 0%, transparent 50%),
-        linear-gradient(160deg, #0d1b2a 0%, #162032 55%, #0a1520 100%);
+        linear-gradient(to bottom, rgba(10,21,32,0.68) 0%, rgba(10,21,32,0.90) 100%),
+        url('chaayekhaana_building_dha1.jpeg') center/cover no-repeat;
     }
 
     .hero-dots {
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(circle, rgba(201,151,74,0.07) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(201,151,74,0.05) 1px, transparent 1px);
       background-size: 50px 50px;
     }
 
@@ -331,27 +331,17 @@
     .about-photo {
       width: 100%;
       aspect-ratio: 4/5;
-      background: linear-gradient(135deg, var(--navy-mid) 0%, #1a3a2a 100%);
       border-radius: 4px;
       border: 1px solid rgba(201,151,74,0.18);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      font-size: 3.5rem;
       overflow: hidden;
       position: relative;
     }
-    .about-photo-hint {
-      position: absolute;
-      bottom: 1.25rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      background: rgba(13,27,42,0.75);
-      padding: 0.35rem 0.9rem;
-      border-radius: 2px;
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
     }
 
     .franchise-badge {
@@ -492,39 +482,101 @@
     .offer-pill span:first-child { font-size: 1rem; }
     .offer-pill strong { color: var(--text); font-weight: 500; }
 
-    /* ── GALLERY ── */
-    .gallery { background: var(--navy-light); }
+    /* ── SOCIAL ── */
+    .social { background: var(--navy-light); }
 
-    .gallery-grid {
+    .social-platforms {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      max-width: 1100px;
-      margin: 0 auto;
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto 4rem;
     }
-    .gallery-item {
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid rgba(201,151,74,0.1);
-      aspect-ratio: 4/3;
+    .platform-card {
+      border-radius: 6px;
+      padding: 2.25rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .platform-card:hover { transform: translateY(-5px); box-shadow: 0 14px 32px rgba(0,0,0,0.45); }
+    .platform-ig { background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 55%, #F77737 100%); }
+    .platform-fb { background: #1877F2; }
+    .platform-tt { background: #010101; border: 1px solid rgba(255,255,255,0.1); }
+    .platform-icon { width: 2.4rem; height: 2.4rem; margin-bottom: 0.3rem; }
+    .platform-icon svg { width: 100%; height: 100%; fill: white; }
+    .platform-name { font-size: 1rem; font-weight: 600; color: #fff; }
+    .platform-handle { font-size: 0.75rem; color: rgba(255,255,255,0.72); }
+    .platform-follow {
+      margin-top: 0.6rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      transition: background 0.2s;
+    }
+    .platform-card:hover .platform-follow { background: rgba(255,255,255,0.15); }
+
+    /* ── VIDEO ── */
+    .video-section { background: var(--navy); }
+    .video-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .video-wrapper video {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid rgba(201,151,74,0.2);
+      display: block;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+    }
+
+    .ig-feed-section { max-width: 1100px; margin: 0 auto; }
+    .ig-feed-header {
+      display: flex;
+      align-items: center;
       justify-content: center;
       gap: 0.6rem;
-      transition: border-color 0.25s;
-    }
-    .gallery-item:hover { border-color: rgba(201,151,74,0.35); }
-    .gallery-item:first-child { grid-column: span 2; aspect-ratio: 16/9; }
-    .gallery-icon { font-size: 2.2rem; opacity: 0.45; }
-    .gallery-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
-
-    .gallery-note {
-      text-align: center;
-      margin-top: 1.5rem;
+      margin-bottom: 2rem;
       font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       color: var(--text-muted);
     }
+    .ig-feed-header a { color: var(--gold); text-decoration: none; }
+    .ig-feed-header a:hover { color: var(--gold-light); }
+
+    .ig-placeholder-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .ig-placeholder-tile {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      border: 1px solid rgba(201,151,74,0.1);
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .ig-placeholder-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s;
+    }
+    .ig-placeholder-tile:hover { border-color: rgba(201,151,74,0.45); transform: scale(1.03); }
+    .ig-placeholder-tile:hover img { transform: scale(1.06); }
+    .ig-feed-cta { text-align: center; margin-top: 2rem; }
 
     /* ── REVIEWS ── */
     .reviews { background: var(--navy); }
@@ -725,15 +777,15 @@
       .about-visual { order: -1; }
       .about-photo { aspect-ratio: 16/9; }
       .location-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item:first-child { grid-column: span 2; }
+      .ig-placeholder-grid { grid-template-columns: repeat(2, 1fr); }
+      .social-platforms { grid-template-columns: repeat(3, 1fr); }
       .footer-top { flex-direction: column; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
 
     @media (max-width: 500px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item:first-child { grid-column: span 1; aspect-ratio: 4/3; }
+      .social-platforms { grid-template-columns: 1fr; }
+      .ig-placeholder-grid { grid-template-columns: 1fr; }
       .stats-row { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
       .hero-actions { flex-direction: column; align-items: center; }
     }
@@ -766,7 +818,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#offer">Offers</a></li>
-    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#social">Social</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#location" class="nav-cta">Find Us</a></li>
   </ul>
@@ -783,7 +835,7 @@
     <h1>New Look.<br><em>Same Legendary Chai.</em></h1>
     <p class="hero-tagline">Experience the warmth of Chaayekhana right here in your neighbourhood — where every cup tells a story and every meal is a memory.</p>
     <div class="hero-meta">
-      <span>📍 Defence Avenue, DHA Phase 1, Islamabad</span>
+      <span>📍 Defence Avenue, DHA 1, Islamabad 46000</span>
       <span class="dot">·</span>
       <span>📞 0321-5481370</span>
     </div>
@@ -821,8 +873,7 @@
     </div>
     <div class="about-visual">
       <div class="about-photo">
-        <span>🫖</span>
-        <span class="about-photo-hint">Add your branch photo here</span>
+        <img src="chaayekhaanadha1.png" alt="Chaayekhana DHA 1 — Your new go-to spot in DHA Phase 1, Islamabad">
       </div>
       <div class="franchise-badge">Official Franchise</div>
     </div>
@@ -911,37 +962,99 @@
   </div>
 </section>
 
-<!-- ── GALLERY ── -->
-<section class="gallery" id="gallery">
+<!-- ── VIDEO ── -->
+<section class="video-section" id="video">
   <div class="section-header">
-    <p class="section-eyebrow">Our Space</p>
-    <h2 class="section-title">A Glimpse of <em>Chaayekhana DHA 1</em></h2>
+    <p class="section-eyebrow">Experience DHA 1</p>
+    <h2 class="section-title">See Us <em>In Action</em></h2>
     <div class="divider"></div>
-    <p class="section-desc">Warm interiors, vibrant food, and a welcoming atmosphere — this is where families gather and memories are made.</p>
+    <p class="section-desc">Take a look inside Chaayekhana DHA 1 — where great food, legendary chai, and warm hospitality come together.</p>
   </div>
-  <div class="gallery-grid">
-    <div class="gallery-item fade-in" style="background:linear-gradient(135deg,#162d42,#152a1e);">
-      <span class="gallery-icon">🏪</span>
-      <span class="gallery-label">Exterior</span>
+  <div class="video-wrapper">
+    <video controls playsinline poster="chaayekhaana_building_dha1.jpeg">
+      <source src="chaayekhaana_dha1_video.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<!-- ── SOCIAL ── -->
+<section class="social" id="social">
+  <div class="section-header">
+    <p class="section-eyebrow">Stay Connected</p>
+    <h2 class="section-title">Follow Us on <em>Social Media</em></h2>
+    <div class="divider"></div>
+    <p class="section-desc">Stay up to date with our latest deals, new dishes, and behind-the-scenes moments from your favourite chai spot.</p>
+  </div>
+
+  <!-- Platform cards -->
+  <div class="social-platforms">
+    <a href="https://www.instagram.com/chaayekhanadha_1/" class="platform-card platform-ig fade-in" target="_blank" rel="noopener" aria-label="Instagram">
+      <div class="platform-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </div>
+      <div class="platform-name">Instagram</div>
+      <div class="platform-handle">@chaayekhanadha_1</div>
+      <div class="platform-follow">Follow →</div>
+    </a>
+    <a href="https://www.facebook.com/share/1AHZGvnMo5/?mibextid=wwXIfr" class="platform-card platform-fb fade-in" target="_blank" rel="noopener" aria-label="Facebook">
+      <div class="platform-icon">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+      <div class="platform-name">Facebook</div>
+      <div class="platform-handle">Chaayekhana DHA 1</div>
+      <div class="platform-follow">Like Page →</div>
+    </a>
+    <a href="https://www.tiktok.com/@chaayekhanadha_1" class="platform-card platform-tt fade-in" target="_blank" rel="noopener" aria-label="TikTok">
+      <div class="platform-icon">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" fill="white"/></svg>
+      </div>
+      <div class="platform-name">TikTok</div>
+      <div class="platform-handle">@chaayekhanadha_1</div>
+      <div class="platform-follow">Follow →</div>
+    </a>
+  </div>
+
+  <!-- Instagram feed -->
+  <div class="ig-feed-section">
+    <div class="ig-feed-header">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:var(--gold)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Latest from <a href="https://www.instagram.com/chaayekhanadha_1/" target="_blank" rel="noopener">@chaayekhanadha_1</a>
     </div>
-    <div class="gallery-item fade-in" style="background:linear-gradient(135deg,#2a1706,#162032);">
-      <span class="gallery-icon">🛋️</span>
-      <span class="gallery-label">Interior Seating</span>
+
+    <!--
+      ══════════════════════════════════════════
+      LIVE INSTAGRAM FEED — free 2-min setup:
+      1. Go to https://behold.so  →  Sign Up Free
+      2. Add Source → Instagram → connect @chaayekhanadha_1
+      3. Widgets → Create Widget → copy the Widget ID
+      4. Replace "SETUP_REQUIRED" in the div below with your ID
+         e.g.  id="behold-widget-abc12345"
+      5. Delete the .ig-placeholder-grid div below it
+      ══════════════════════════════════════════
+    -->
+    <div id="behold-widget-SETUP_REQUIRED"></div>
+    <script src="https://w.behold.so/widget.js" type="module"></script>
+
+    <!-- Latest posts preview — replace this grid once Behold live feed is active -->
+    <div class="ig-placeholder-grid">
+      <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
+        <img src="chaayekhaana_menu_1.png" alt="Halwa Puri — Chaayekhana DHA 1">
+      </a>
+      <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
+        <img src="chaayekhaana_menu_2.png" alt="Fettuccine Alfredo — Chaayekhana DHA 1">
+      </a>
+      <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
+        <img src="chaayekhaana_menu_3.png" alt="Check In Sip Free — Chaayekhana DHA 1">
+      </a>
+      <a href="https://www.instagram.com/chaayekhanadha_1/" class="ig-placeholder-tile fade-in" target="_blank" rel="noopener">
+        <img src="chaayekhaana_menu_4.png" alt="Ladies Tuesday — Chaayekhana DHA 1">
+      </a>
     </div>
-    <div class="gallery-item fade-in" style="background:linear-gradient(135deg,#152a1e,#2a1706);">
-      <span class="gallery-icon">🫖</span>
-      <span class="gallery-label">Signature Chai</span>
-    </div>
-    <div class="gallery-item fade-in" style="background:linear-gradient(135deg,#1e1c0a,#162032);">
-      <span class="gallery-icon">🍕</span>
-      <span class="gallery-label">Food</span>
-    </div>
-    <div class="gallery-item fade-in" style="background:linear-gradient(135deg,#162032,#1e1c0a);">
-      <span class="gallery-icon">👨‍👩‍👧</span>
-      <span class="gallery-label">Family Dining</span>
+
+    <div class="ig-feed-cta">
+      <a href="https://www.instagram.com/chaayekhanadha_1/" target="_blank" rel="noopener" class="btn btn-ghost">View All on Instagram &nbsp;↗</a>
     </div>
   </div>
-  <p class="gallery-note">📸 Replace these placeholders with your own high-quality branch photos for the best impact.</p>
 </section>
 
 <!-- ── REVIEWS ── -->
@@ -1007,7 +1120,7 @@
         <div class="loc-icon">📍</div>
         <div>
           <div class="loc-label">Address</div>
-          <div class="loc-value">Defence Avenue, DHA Phase 1<br>Islamabad, Pakistan</div>
+          <div class="loc-value">Plaza No. 11, Sector B1<br>Defence Avenue, DHA 1<br>Islamabad 46000</div>
         </div>
       </div>
       <div class="location-detail">
@@ -1032,13 +1145,13 @@
         </div>
       </div>
       <div class="location-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Defence+Avenue+DHA+Phase+1+Islamabad" target="_blank" rel="noopener" class="btn btn-gold">Get Directions</a>
+        <a href="https://maps.app.goo.gl/3pLD5ushRMmmHcAG7" target="_blank" rel="noopener" class="btn btn-gold">Get Directions</a>
         <a href="https://wa.me/923215481370" target="_blank" rel="noopener" class="btn btn-green">WhatsApp Us</a>
       </div>
     </div>
     <div class="map-wrap">
       <iframe
-        src="https://maps.google.com/maps?q=Defence+Avenue+DHA+Phase+1+Islamabad+Pakistan&output=embed&z=15"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.10871753489!2d73.08945237699952!3d33.55055154405225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed25d8a9331b%3A0x46f77c42fe0a8bfd!2sChaaye%20Khana%20DHA%201!5e0!3m2!1sen!2s!4v1782129932844!5m2!1sen!2s"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -1054,7 +1167,18 @@
     <div>
       <div class="footer-brand-name">Chaayekhana DHA 1</div>
       <div class="footer-brand-sub">Official Franchise · Islamabad</div>
-      <p class="footer-brand-desc">Your neighbourhood destination for premium chai and great food on Defence Avenue, DHA Phase 1, Islamabad.</p>
+      <p class="footer-brand-desc">Plaza No. 11, Sector B1, Defence Avenue, DHA 1, Islamabad 46000.</p>
+      <div style="display:flex;gap:0.75rem;margin-top:1rem;">
+        <a href="https://www.instagram.com/chaayekhanadha_1/" target="_blank" rel="noopener" aria-label="Instagram" style="width:34px;height:34px;border-radius:6px;background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1AHZGvnMo5/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" style="width:34px;height:34px;border-radius:6px;background:#1877F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@chaayekhanadha_1" target="_blank" rel="noopener" aria-label="TikTok" style="width:34px;height:34px;border-radius:6px;background:#010101;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
     </div>
     <div class="footer-links-col">
       <h4>Explore</h4>
@@ -1062,7 +1186,7 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#offer">Current Offer</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#social">Social</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#location">Location</a></li>
       </ul>
@@ -1072,7 +1196,7 @@
       <ul>
         <li><a href="tel:+923215481370">0321-5481370</a></li>
         <li><a href="https://wa.me/923215481370" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="https://www.google.com/maps/dir/?api=1&destination=Defence+Avenue+DHA+Phase+1+Islamabad" target="_blank" rel="noopener">Get Directions</a></li>
+        <li><a href="https://maps.app.goo.gl/3pLD5ushRMmmHcAG7" target="_blank" rel="noopener">Get Directions</a></li>
         <li><a href="https://www.chaayekhana.com" target="_blank" rel="noopener">Main Website ↗</a></li>
       </ul>
     </div>
