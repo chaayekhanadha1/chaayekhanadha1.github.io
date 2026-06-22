@@ -1265,6 +1265,16 @@
 
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
+  // On mobile, skip menu.html and open PDF directly in a new tab so the
+  // home page stays open underneath — back/close returns the user here.
+  if (window.innerWidth < 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    document.querySelectorAll('a[href="menu.html"]').forEach(function(a) {
+      a.href = 'menu/chaayekhanaDHA1menu.pdf';
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  }
+
   // About section carousel — auto-advances every 3 seconds
   (function() {
     const slides = document.querySelectorAll('.about-photo .carousel-slide');
